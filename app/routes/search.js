@@ -6,5 +6,10 @@ export default Ember.Route.extend({
 					.replace('%1', params.line)
 					.replace('%2', params.repo);
 		return Ember.$.getJSON(url);
+	},
+	actions: {
+		error: function(error, transition) {
+			return this.transitionTo('error', error.status, error.responseText);
+		}
 	}
 });

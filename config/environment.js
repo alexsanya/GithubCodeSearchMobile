@@ -21,6 +21,10 @@ module.exports = function(environment) {
     cordova: {
       rebuildOnChange: false,
       emulate: false
+    },
+    contentSecurityPolicy: {
+      'connect-src': "'self', https://raw.githubusercontent.com https://raw.githubusercontent.com https://api.github.com",
+      'default-src': "'self', https://raw.githubusercontent.com https://raw.githubusercontent.com https://api.github.com"
     }
   };
 

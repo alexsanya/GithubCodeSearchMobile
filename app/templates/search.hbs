@@ -1,6 +1,15 @@
-<h2>Found results</h2>
-<ul>
-	{{#each item in model.items}}
-		<li>{{item.name}}</li>
-	{{/each}}
-</ul>
+<header>
+  <div class="back-button left-button" {{action 'back'}}>
+    Back
+  </div>
+  <h1>
+    {{model.repo}}
+  </h1>
+</header>
+<div id="main">
+	<ul class="ui-table-view">
+		{{#each model.matches.items as |item|}}
+			<li {{action 'showFile' model.repo item model.line}} class="disclosure">{{item.path}}</li>
+		{{/each}}
+	</ul>
+</div>

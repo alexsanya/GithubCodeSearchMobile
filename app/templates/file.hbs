@@ -1,0 +1,13 @@
+<header>
+  <div class="back-button left-button" {{action 'back'}}>
+    Back
+  </div>
+  <h1>
+    {{model.path}}
+  </h1>
+</header>
+<div id="main">
+	{{#each model.content key="@index" as |line| }}
+		<pre class="{{line.kind}}">{{ line.text }}</pre>
+	{{/each}}
+</div>	

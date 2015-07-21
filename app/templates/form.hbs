@@ -1,5 +1,12 @@
-<label>GitHub repository name:</label>
-{{input type="text" value=repoURI}}
-<label>Search line:</label>
-{{input type="text" value=searchLine}}
-<button {{action "findIncludes"}} class="full">Find</button>
+<header>
+  <h1>
+    Github search
+  </h1>
+</header>
+<div id="main">
+	<label>GitHub repository name:</label>
+	{{input type="text" value=repoURI}}
+	<label>Search line:</label>
+	{{input type="text" value=searchLine}}
+	<button {{action "findIncludes"}} class="full">Find</button>
+</div>	

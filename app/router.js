@@ -6,6 +6,8 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('form', { path: '/'});
+  this.resource('search', { path: '/search/repo/:repo/line/:line'});
 });
 
 export default Router;
